@@ -1,0 +1,323 @@
+#body {
+    font-family: "Roboto", serif;
+}
+
+#navbar {
+    border-bottom: 3px solid white;
+    /* background-color: rgb(0, 0, 255); */
+}
+
+#demo {
+    color: green;
+    display: none;
+    background-color: rgb(233, 232, 253);
+    padding: 10px;
+    width: 30rem;
+    box-shadow: 2px 2px;
+}
+
+@media (max-width: 490px) {
+    #demo {
+        font-size: 12px;
+    }
+}
+
+#thirdnaV {
+    background: transparent;
+    width: 30rem;
+}
+
+@media (max-width: 490px) {
+    #thirdnaV {
+        width: 50rem;
+    }
+}
+
+#searchCard {
+    background: transparent;
+    width: 20rem;
+}
+.searchIcon{
+    display: none;
+}
+#closeSVG{
+    display: none;
+}
+
+@media (max-width: 750px) {
+    #searchCard {
+        display: none;
+        width: 10rem;
+    }
+    .searchIcon{
+        display: block;
+    }
+    #closeSVG{
+        display: block;
+    }
+}
+
+.notification {
+    /* padding: 7px 5px; */
+    background-color: rgb(206, 4, 4);
+    border-radius: 60%;
+    color: white;
+    font-size: 11px;
+    margin-top: -42px;
+    margin-left: 22px;
+    display: none;
+    width: 25px;
+    text-align: center;
+}
+
+.dropdown {
+    margin-top: -7px;
+}
+
+#goodsCard {
+    width: 38rem;
+}
+
+@media (max-width: 1115px) {
+    #goodsCard {
+        width: 28rem;
+    }
+}
+
+/****NEW CART */
+#mainCart {
+    width: 40rem;
+    background-color: rgb(172, 172, 252);
+}
+
+#addeddCard {
+    display: none;
+}
+
+#addeddCardd {
+    display: none;
+}
+
+@media (max-width: 490px) {
+    #mainCart {
+        width: 25rem;
+    }
+}
+
+#AddeddCard2 p {
+    font-size: 15px;
+}
+
+@media (max-width: 490px) {
+    #AddeddCard2 p {
+        font-size: 12px;
+    }
+}
+
+#emptyCard button {
+    border-radius: 10px;
+    border: none;
+    height: 50px;
+    background-color: blue;
+    color: white;
+}
+
+#total {
+    display: none;
+    background: transparent;
+}
+
+#total button {
+    border-radius: 10px;
+    border: none;
+    height: 50px;
+    background-color: blue;
+    color: white;
+}
+
+#cardss {
+    background: transparent;
+}
+
+#d-flex {
+    flex-wrap: wrap;
+}
+
+/*****WELCOME */
+#welcome {
+    background-image: url(../Images/Clothe\ Background.avif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-top: 3px solid rgb(255, 255, 255);
+    border-bottom: 3px solid rgb(255, 255, 255);
+    padding-top: 50px;
+    padding-bottom: 50px;
+    margin-top: 100px;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    box-shadow: 3px 3px 10px black;
+}
+
+#welcome h1 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    animation: bounce 5s infinite;
+    margin-left: 50px;
+}
+@keyframes bounce {
+    0%, 100%{
+        transform: translateX(50);
+    }
+    50% {
+        transform: translateX(-30px);
+    }
+  }
+@media (max-width: 490px){
+    #welcome h1 {
+        font-size: 25px;
+    }
+}
+@media (max-width: 490px){
+    #welcome h1 {
+        font-size: 25px;
+    }
+}
+
+#welcome2 h1 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    animation: bounce 5s infinite;
+}
+@media (max-width: 490px){
+    #welcome2 h1 {
+        font-size: 25px;
+    }
+}
+
+#welcome2 {
+    background-image: url(../Images/Clothe\ Background\ 3.avif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-top: 3px solid rgb(255, 255, 255);
+    border-bottom: 3px solid rgb(255, 255, 255);
+    padding-top: 50px;
+    padding-bottom: 50px;
+    margin-top: 30px;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    box-shadow: 3px 3px 10px black;
+}
+
+/****ITEM */
+#itemFlex :first-child {
+    padding-bottom: 10px;
+    border-bottom: 3px solid black;
+}
+
+/******GOOD ITEM */
+#innerCol {
+    background-color: rgba(85, 85, 255, 0.918);
+    backdrop-filter: blur(10px);
+    border-radius: 30px;
+}
+#mainGoods{
+    flex-wrap: wrap;
+    padding: 20px;
+}
+@media (max-width: 490px) {
+    #mainGoods{
+        padding: 10px 0px 10px 0px;
+    }
+}
+#goodsCard {
+    width: 38rem;
+}
+
+@media (max-width: 1115px) {
+    #goodsCard {
+        width: 28rem;
+    }
+}
+
+@media (max-width: 1115px) {
+    #goodsCard {
+        width: 28rem;
+    }
+}
+
+@media (max-width: 1115px) {
+    #goodsCard {
+        width: 28rem;
+    }
+}
+
+@media (max-width: 1115px) {
+    #clothes :nth-child(2) {
+        font-size: 15px;
+    }
+}
+
+
+#goods {
+    background: transparent;
+}
+
+#clothes {
+    overflow: hidden;
+    position: relative;
+}
+#clothes img{
+    height: 16rem;
+}
+@media (max-width: 750px) {
+    #clothes img{
+        height: 12rem;
+    }
+}
+
+#clothes :nth-child(3) {
+    margin-top: -15px;
+}
+
+#clothes :nth-child(4) {
+    padding: 7px 15px 7px 15px;
+    border: 1px solid blue;
+    border-radius: 10px;
+}
+
+#clothes :nth-child(4):hover {
+    background-color: rgb(100, 100, 243);
+    color: white;
+    border: 1px solid black;
+}
+
+@media (max-width: 490px) {
+    #clothes :nth-child(2) {
+        font-size: 12px;
+    }
+}
+
+/****NEXT */
+#next button {
+    background-color: rgb(208, 208, 252);
+    border-radius: 10px;
+}
+
+#next :nth-child(2):hover {
+    background-color: black;
+    color: white;
+}
+
+#next :nth-child(3):hover {
+    background-color: black;
+    color: white;
+}
+
+#next :nth-child(4):hover {
+    background-color: black;
+    color: white;
+}
+
+/* FOOTER */
+#footer {
+    flex-wrap: wrap;
+    z-index: 0;
+}

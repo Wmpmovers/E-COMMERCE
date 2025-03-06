@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="page2.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Agu+Display&family=Anton&family=Baloo+2:wght@400..800&family=Bebas+Neue&family=Faculty+Glyphic&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Playwrite+HR+Lijeva:wght@100..400&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Russo+One&family=Saira+Condensed:wght@100;200;300;400;500;600;700;800;900&family=Spicy+Rice&family=Teko:wght@300..700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+</head>
+<body>
+     <!-- NAVBAR -->
+     <div class="d-flex justify-content-evenly fixed-top bg-body-tertiary" id="navbar">
+        <div class="card p-1 ms-3 border-0" style="width: 30rem;" id="cardss">
+            <img src="../Images/logo_2-removebg-preview.png" alt="" style="width: 70px;">
+        </div>
+        <div class="card p-1 mt-2 border-0" style="width: 30rem;" id="searchCard">
+            <form >
+                <div class="mb-3">
+                    <div class="d-flex">
+                        <input type="search" class="form-control rounded-1" id="exampleInputEmail1"
+                        aria-describedby="emailHelp" placeholder="Search" style="height: 40px;">
+                        <svg id="closeSVG" xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+                            <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708"/>
+                          </svg>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="card p-1 mt-2 border-0"  id="thirdnaV">
+            <div class="d-flex justify-content-evenly mt-2">
+                <p class="searchIcon">  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                    <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+                  </svg></p>
+                <p><i class="fa-solid fa-map"></i> NGN</p>
+                <p>Login</p>
+                <div class="card border-0" id="cardss">
+                    <div class="dropdown">
+                        <button class="btn dropdown-toggle border-0" type="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            <span><i class="fa-solid fa-cart-shopping"></i></span>
+                        </button>
+                        <ul class="dropdown-menu p-3 text-white " id="mainCart">
+                            <!------MAIN CART CARD -->
+                            <h4>Your Carts</h4>
+                            <div class="card p-3 text-center" id="emptyCard">
+                                <h5>Your Cart is Empty</h5>
+                                <p>Looks like you haven't added anything to your cart yet</p>
+                                <button class="mt-3">Continue Shopping</button>
+                            </div>
+                            <!-- ADDED CARD -->
+                            <div class="card p-2 " id="addeddCard">
+                                <div class="d-flex justify-content-between" id="AddeddCard2">
+                                    <p id="newCart1">You just Added </p>
+                                    <p id="newCart2"></p>
+                                    <p class="fw-bold" id="newCart3">N</p>
+                                </div>
+                            </div>
+                            <div class="card p-2 mt-2" id="addeddCardd">
+                                <div class="d-flex justify-content-between" id="AddeddCard2">
+                                    <p id="newCart1">You just Added </p>
+                                    <p id="newCart4"></p>
+                                    <p class="fw-bold" id="newCart5">N</p>
+                                </div>
+                            </div>
+
+                            <div class="card border-0 mt-5" id="total">
+                                <div class="d-flex justify-content-between">
+                                    <h3 class="text-white">Total Cart</h3>
+                                    <h4 class="text-danger" id="totalBal"></h4>
+                                </div>
+                                <button class="btn mt-3 w-100">Proceed to payment</button>
+                            </div>
+                        </ul>
+                        <span class="notification"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!--------WELCOME CONTAINER -->
+    <div class="card  text-white text-center" id="welcome">
+        <h1 class="fw-bold">Welcome to WeStyle Cart</h1>
+    </div>
+
+    <!------ITEM LIST -->
+    <div class="d-flex justify-content-start p-3  mt-3">
+        <div class="card border-0" style="width: 40rem;" id="cardss">
+            <div class="d-flex justify-content-evenly" id="itemFlex">
+                <a class="nav-link ps-3 pe-3 text-center" href="#">All</a>
+                <a class="nav-link" href="../T-SHIRT/shirt.html">T-shirt</a>
+                <a class="nav-link" href="#">Trousers</a>
+                <a class="nav-link" href="#">Pants</a>
+                <a class="nav-link" href="#">Shoes</a>
+            </div>
+        </div>
+    </div>
+
+    <!-------GOODS ITEM-->
+
+    <div class="card mt-3 border-0" id="goods">
+        <div class="d-flex justify-content-evenly bg-body-secondary" id="mainGoods">
+
+            <!-- FIRST CARD OF GOODS -->
+            <div class="card p-2 border-0"  id="goodsCard">
+                <div class="d-flex justify-content-evenly p-3" id="innerCol">
+                    <div class="card" style="width: 15rem;">
+                        <div class="card p-2" id="clothes">
+                            <img class="image-thumbnail" src="../Images/Pant 3.webp" alt="">
+                            <p class="text-danger">Harsh T-shirt design</p>
+                            <p class="fw-bold">N24,000.00</p>
+                            <button id="btnCart1">Add to Cart <i class="fa-solid fa-cart-shopping"></i></button>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 15rem;">
+                        <div class="card p-2" id="clothes">
+                            <img class="image-thumbnail" src="../Images/Shoe 2.jpg" alt="">
+                            <p class="text-danger">Mixed color T-shirt design</p>
+                            <p class="fw-bold">N22,500.00</p>
+                            <button id="btnCart2">Add to Cart <i class="fa-solid fa-cart-shopping"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SECOND CARD OF GOODS -->
+            <div class="card p-2 border-0"  id="goodsCard">
+                <div class="d-flex justify-content-evenly p-3" id="innerCol">
+                    <div class="card" style="width: 15rem;">
+                        <div class="card p-2" id="clothes">
+                            <img class="image-thumbnail" src="../Images/5 clothe.avif" alt="">
+                            <p class="text-danger">Plain T-shirt design</p>
+                            <p class="fw-bold">N48,000.00</p>
+                            <button id="btnCart3">Add to Cart <i class="fa-solid fa-cart-shopping"></i></button>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 15rem;">
+                        <div class="card p-2" id="clothes">
+                            <img class="image-thumbnail" src="../Images/Pant 4.jpg" alt="">
+                            <p class="text-danger">Colored T-shirt design</p>
+                            <p class="fw-bold">N21,100.00</p>
+                            <button id="btnCart4">Add to Cart <i class="fa-solid fa-cart-shopping"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--------SECOND WELCOME CONTAINER -->
+    <div class="card text-white text-center" id="welcome2">
+        <h1 class="fw-bold">This is the best way to shop</h1>
+    </div>
+    <!-------SECOND GOODS ITEM-->
+
+    <div class="card mt-3 border-0" id="goods">
+        <div class="d-flex justify-content-evenly  bg-body-secondary" id="mainGoods">
+
+            <!-- FIRST CARD OF GOODS -->
+            <div class="card p-2 border-0"  id="goodsCard">
+                <div class="d-flex justify-content-evenly p-3" id="innerCol">
+                    <div class="card" style="width: 15rem;">
+                        <div class="card p-2" id="clothes">
+                            <img class="image-thumbnail" src="../Images/Pant 5.jpg" alt="">
+                            <p class="text-danger">Colored T-shirt design</p>
+                            <p class="fw-bold">N24,000.00</p>
+                            <button id="btnCart5">Add to Cart <i class="fa-solid fa-cart-shopping"></i></button>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 15rem;">
+                        <div class="card p-2" id="clothes">
+                            <img class="image-thumbnail" src="../Images/Pant 6.webp" alt="">
+                            <p class="text-danger">Colored T-shirt design</p>
+                            <p class="fw-bold">N22,500.00</p>
+                            <button id="btnCart6">Add to Cart <i class="fa-solid fa-cart-shopping"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SECOND CARD OF GOODS -->
+            <div class="card p-2 border-0"  id="goodsCard">
+                <div class="d-flex justify-content-evenly p-3" id="innerCol">
+                    <div class="card" style="width: 15rem;">
+                        <div class="card p-2" id="clothes">
+                            <img class="image-thumbnail" src="../Images/Shoe 1.jpeg" alt="">
+                            <p class="text-danger">Plain T-shirt design</p>
+                            <p class="fw-bold">N48,000.00</p>
+                            <button id="btnCart7">Add to Cart <i class="fa-solid fa-cart-shopping"></i></button>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 15rem;">
+                        <div class="card p-2" id="clothes">
+                            <img class="image-thumbnail" src="../Images/Shoe 2.jpg" alt="">
+                            <p class="text-danger">Colored T-shirt design</p>
+                            <p class="fw-bold">N21,100.00</p>
+                            <button id="btnCart8">Add to Cart <i class="fa-solid fa-cart-shopping"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-------THIRD ITEM-->
+
+    <div class="card  border-0" id="goods">
+        <div class="d-flex justify-content-evenly bg-body-secondary" id="mainGoods">
+
+            <!-- FIRST CARD OF GOODS -->
+            <div class="card p-2 border-0" id="goodsCard">
+                <div class="d-flex justify-content-evenly p-3" id="innerCol">
+                    <div class="card" style="width: 15rem;">
+                        <div class="card p-2" id="clothes">
+                            <img class="image-thumbnail" src="../Images/Show 3.jpg" alt="">
+                            <p class="text-danger">Colored T-shirt design</p>
+                            <p class="fw-bold">N24,000.00</p>
+                            <button id="btnCart9">Add to Cart <i class="fa-solid fa-cart-shopping"></i></button>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 15rem;">
+                        <div class="card p-2" id="clothes">
+                            <img class="image-thumbnail" src="../Images/FaceCap 1.jpg" alt="">
+                            <p class="text-danger">Colored T-shirt design</p>
+                            <p class="fw-bold">N22,500.00</p>
+                            <button id="btnCart10">Add to Cart <i class="fa-solid fa-cart-shopping"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SECOND CARD OF GOODS -->
+            <div class="card p-2 border-0"  id="goodsCard">
+                <div class="d-flex justify-content-evenly p-3" id="innerCol">
+                    <div class="card" style="width: 15rem;">
+                        <div class="card p-2" id="clothes">
+                            <img class="image-thumbnail" src="../Images/FaceCap 2.jpg" alt="">
+                            <p class="text-danger">Plain T-shirt design</p>
+                            <p class="fw-bold">N48,000.00</p>
+                            <button id="btnCart11">Add to Cart <i class="fa-solid fa-cart-shopping"></i></button>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 15rem;">
+                        <div class="card p-2" id="clothes">
+                            <img class="image-thumbnail" src="../Images/FaceCap 3.jpg" alt="">
+                            <p class="text-danger">Colored T-shirt design</p>
+                            <p class="fw-bold">N21,100.00</p>
+                            <button id="btnCart12">Add to Cart <i class="fa-solid fa-cart-shopping"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-----NEXT PAGE -->
+    <div class="d-flex justify-content-center mt-3">
+        <div class="card mt-3 border-0" style="width: 20rem;" id="cardss">
+            <div class="d-flex justify-content-center" id="next">
+                <button class="ps-3 pe-3 pt-2 pb-2 border-0"><a class="nav-link" href="../demo.html"><svg xmlns="http://www.w3.org/2000/svg" height="24px"
+                        viewBox="0 -960 960 960" width="24px" fill="#000000">
+                        <path d="m313-440 224 224-57 56-320-320 320-320 57 56-224 224h487v80H313Z" />
+                    </svg></a></button>
+                <button class="ps-3 pe-3 border-0"><a class="nav-link" href="../index.html">1</a></button>
+                <button class="ps-3 pe-3 border-0">2</button>
+                <button class="ps-3 pe-3 border-0">3</button>
+                <button class="ps-3 pe-3 border-0"><svg xmlns="http://www.w3.org/2000/svg" height="24px"
+                        viewBox="0 -960 960 960" width="24px" fill="#000000">
+                        <path d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z" />
+                    </svg></button>
+            </div>
+        </div>
+    </div>
+
+    <!--------FOOTER -->
+    <div class="d-flex p-3 justify-content-evenly bg-dark mt-3" id="footer">
+        <div class="card p-3 border-0 text-white" style="width: 35rem;" id="cardss">
+            <h5>Contact Us</h5>
+            <p>07049095848</p>
+            <p>No. 49 Iperu Akesan Street Alaguntan Iyana Ipaja Lagos</p>
+        </div>
+        <div class="card p-3 border-0 text-white" style="width: 35rem;" id="cardss">
+            <h5> SIGN IN FOR DISCOUNT UPDATE</h5>
+            <form>
+                <div class="mb-3">
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                        placeholder="Enter Your Email">
+                </div>
+                <div class="mb-3">
+                    <input type="password" class="form-control" id="exampleInputPassword1"
+                        placeholder="ENter Your Phone Number">
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+            <a class="text-white mt-2" href="#">Return Policy</a>
+        </div>
+    </div>
+
+    <div class="text-center shadow mt-3 fixed-bottom rounded" id="demo">One item as been added succesfully!!!</div>
+    <script src="page2.js"></script>
+</body>
+</html>
